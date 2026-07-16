@@ -1,0 +1,143 @@
+.hero{
+    min-height:100vh;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    background-image:
+        linear-gradient(
+            rgba(30,0,0,3),
+            rgba(20,0,0,.5)
+        ),
+        url("../assets/photos/bg-haur-90.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    display:flex;
+
+    flex-direction:column;
+
+    /* background:
+
+    radial-gradient(
+        ellipse at top,
+        rgba(255,40,40,.35),
+        transparent 45%
+    ),
+
+    radial-gradient(
+        ellipse at bottom right,
+        rgba(255,180,60,.18),
+        transparent 35%
+    ),
+
+    #090202; */
+
+    /* background:
+
+        linear-gradient(
+            rgba(255,255,255,.03) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.03) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            180deg,
+            #120304,
+            #070202
+        );
+
+    background-size:
+        60px 60px,
+        60px 60px,
+        cover;
+
+    display:flex; */
+
+}
+
+
+.logo{
+    margin-top:150px;
+    width:210px;    
+    animation: float 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 25px rgba(255,190,60,.45));
+}
+
+.name{
+    margin-top:0px;
+    font-family: "Inter", sans-serif;
+    font-size:3rem;
+    color: rgb(255, 243, 229);
+    letter-spacing: -2px;
+    font-weight:800;
+    background:linear-gradient(
+        90deg,
+        #f1e5cd 0%,
+        #f1e2c0 40%,
+        #f7db90 50%,
+        #f8e9bf 60%,
+        #f1e4cc 100%
+    );
+
+    background-size:300% 100%;
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:sweep 10s linear infinite; 
+}
+
+.profession{
+    margin: 18px;
+    font-family: "Inter", sans-serif;
+    font-size:15px;
+    font-weight:500;
+    letter-spacing:6px;
+    text-transform:uppercase;
+
+    color:#e8d9bf;
+
+    text-align:center;
+
+    opacity:.9;
+
+    text-shadow:
+        0 0 8px rgba(212,175,55,.15);
+
+    animation: professionGlow 4s ease-in-out infinite alternate;
+}
+
+.subtitle{
+    margin-top:auto;
+    margin-bottom:40px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: linear-gradient(
+        90deg,
+        #6d0019,
+        #7e4949,
+        #700707
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* background-clip: text;
+    color:#ff4d6d; */
+
+    animation: glow 2s infinite alternate;
+}

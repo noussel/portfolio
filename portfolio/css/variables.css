@@ -1,0 +1,37 @@
+:root{
+
+    --background:#050505;
+
+    --primary:#6d0019;
+
+    --secondary:#d4af37;
+
+    --white:#ffffff;
+
+    --x:#550c0c;
+
+    --cream:rgb(248, 243, 237);
+
+    --text:#f4ede6;
+
+    --gold:#d4af37;
+
+    --subtitle:#b8b8b8;
+    --gold-light:#f7db90;
+
+    --gold-deg: linear-gradient(
+        90deg,
+        #6b4e00 0%,
+        #b8860b 20%,
+        #ffd700 40%,
+        #fdf4b5 50%,
+        #ffd700 60%,
+        #b8860b 80%,
+        #6b4e00 100%
+    );
+
+    --font:"Inter",sans-serif;
+
+}
+
+/* color:var(--primary); ===========  color:#6d0019;*/

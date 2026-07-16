@@ -1,0 +1,322 @@
+/* ===========================================
+                CONTACT
+=========================================== */
+
+.contact{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:180px 0;
+
+    z-index:0;
+
+    background:
+    linear-gradient(
+        to bottom,
+        #090203,
+        #050102,
+        #090203
+    );
+
+}
+
+/* Bordeaux Glow */
+
+.contact::before{
+
+    content:"";
+    top:-120px;
+
+    position:absolute;
+
+    /* bottom:-220px; */
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:700px;
+
+    height:420px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        ellipse,
+        rgba(167, 25, 46, 0.55),
+        rgba(80,10,20,.30),
+        transparent
+    );
+
+    filter:blur(90px);
+
+    pointer-events:none;
+
+}
+
+.contact-container{
+
+    width:min(1400px,90%);
+
+    margin:auto;
+    z-index:1;
+
+}
+.contact-header{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    margin-top:00px;
+    margin-bottom:80px;
+}
+
+.contact .section-title{
+    margin-bottom:20px;
+    z-index:0;
+    font-family: "Inter", sans-serif;
+
+    background:linear-gradient(
+        90deg,
+        #f1e5cd 0%,
+        #f1e2c0 40%,
+        #f7db90 50%,
+        #f8e9bf 60%,
+        #f1e4cc 100%
+    );
+
+    background-size:300% 100%;
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:sweep 10s linear infinite; 
+}
+
+
+.contact .section-subtitle{
+    max-width:650px;
+    color:#b9b9b9;
+    font-family: "Inter", sans-serif;
+
+    line-height:1.9;
+    font-family:var(--font);
+    margin:0 auto;
+}
+
+/* ========================= */
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+/* ========================= */
+
+.contact-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding: 10px;
+
+    border-radius:20px;
+
+    text-decoration:none;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(14px);
+
+    transition:.4s;
+
+}
+
+/* Glow */
+
+.contact-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-90px;
+
+    right:-60px;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    background:rgba(90,15,25,.22);
+
+    filter:blur(80px);
+
+    transition:.4s;
+
+}
+
+.contact-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(212,175,55,.35);
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.45),
+    0 0 35px rgba(212,175,55,.08);
+
+}
+
+.contact-card:hover::before{
+
+    background:rgba(241, 78, 108, 0.32);
+
+}
+
+/* ========================= */
+
+.contact-icon{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.05);
+
+    flex-shrink:0;
+
+    transition:.35s;
+
+}
+
+.contact-icon img{
+
+    width:34px;
+
+}
+
+.contact-card:hover .contact-icon{
+
+    transform:scale(1.08) rotate(-5deg);
+
+}
+
+/* ========================= */
+
+.contact-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.contact-label{
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+    color:#d4af37;
+
+    margin-bottom:8px;
+
+    font-family:var(--font);
+
+}
+
+.contact-content h3{
+
+    color:var(--cream);
+
+    font-size:22px;
+
+    font-family: var(--font);
+
+    margin-bottom:2cqmin;
+
+    font-family:var(--font);
+
+    transition:.4s;
+
+}
+
+.contact-card:hover .contact-content h3{
+
+    background:linear-gradient(
+        90deg,
+        #3f0211,
+        #642533,
+        #9b8437,
+        #f6d878,
+        #b99d3f,
+        #8b3145,
+        #35020e
+    );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:glow 2s infinite alternate;
+
+}
+
+.contact-content p{
+
+    color:#b9b9b9;
+
+    line-height:1.6;
+
+    font-size:14px;
+
+    font-family:var(--font);
+
+}
+
+/* ========================= */
+
+@media(max-width:900px){
+
+    .contact-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .contact-card{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+}
