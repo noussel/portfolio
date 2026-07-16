@@ -131,34 +131,33 @@ gsap.from(".intro-buttons",{
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".navbar a");
 
-window.addEventListener("scroll", () => {
+sections.forEach(section => {
 
-    let current = "home";
+    ScrollTrigger.create({
 
-    if (window.scrollY < 100) {
-        current = "home";
-    } else {
+        trigger: section,
 
-        sections.forEach(section => {
+        start: "top center",
 
-            const sectionTop = section.offsetTop - 120;
+        end: "bottom center",
 
-            if (window.scrollY >= sectionTop) {
-                current = section.getAttribute("id");
-            }
+        onEnter: () => setActive(section.id),
 
-        });
-
-    }
-
-    navLinks.forEach(link => {
-
-        link.classList.remove("active");
-
-        if (link.getAttribute("href") === "#" + current) {
-            link.classList.add("active");
-        }
+        onEnterBack: () => setActive(section.id)
 
     });
 
 });
+
+function setActive(id) {
+
+    navLinks.forEach(link => {
+
+        link.classList.toggle(
+            "active",
+            link.getAttribute("href") === "#" + id
+        );
+
+    });
+
+}
